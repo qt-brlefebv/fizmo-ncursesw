@@ -40,9 +40,9 @@ man6_MANS = src/man/fizmo-ncursesw.6
 
 install-data-local::
 	mkdir -p $(DESTDIR)$(localedir)
-	for l in `cd src/locales ; ls -d ??_??`; \
+	for l in `cd $(srcdir)/src/locales ; ls -d ??_??`; \
 	  do \
 	  mkdir -p $(DESTDIR)$(localedir)/$$l; \
-	  cp src/locales/$$l/*.txt $(DESTDIR)$(localedir)/$$l; \
+	  cp $(srcdir)/src/locales/$$l/*.txt $(DESTDIR)$(localedir)/$$l; \
 	done
 
